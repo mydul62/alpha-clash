@@ -48,20 +48,26 @@
     </style>
   </head>
   <body>
-    <main class="bg-[#010313] home min-h-screen bg-[url('images/background.png')] bg-no-repeat bg-top">
+    <main class="bg-[#010313] home  min-h-screen bg-[url('images/background.png')] bg-no-repeat bg-top">
       <!-- home screen  -->
-      <section class="hidden ">
+      <section id="Home_screen" class="home ">
         <div class="min-h-screen text-white text-center flex flex-col justify-center items-center space-y-6">
           <h1 class="text-9xl anton-regular">ALPHABET CLASH</h1>
           <p class="poppins-semibold ">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
-          <button class="poppins-medium bg-white text-black rounded-md px-7 py-3 text-2xl">Play Now</button>
+          <button onclick="playBtn()" class="poppins-medium bg-white text-black rounded-md px-7 py-3 text-2xl">Play Now</button>
         </div>
       </section>
       <!-- play ground  -->
-      <section class="play-ground hidden">
+      <section id="play_screen" class="play-ground hidden ">
          <!-- screen  -->
          <div class=" flex justify-center ">
-          <div class="artboard bg-[#FFFFFFB3] artboard-horizontal phone-6 border-[20px] border-[#212542CC] my-[100px] ">1024×320</div>
+          <div class="artboard bg-[#FFFFFFB3] artboard-horizontal phone-6 border-[20px] border-[#212542CC] my-[100px] ">
+            <div class="flex justify-center">
+              <p class="bg-[#212542CC] inline-block px-4 pb-4 rounded-b-xl text-white poppins-medium">Don't watch keyboard  while playing...</p>
+            </div>
+            <div class="min-h-full flex justify-center items-center">
+              <h1 id="display-board" class="text-9xl uppercase poppins-semibold ">Y</h1></div>
+          </div>
          </div>
          <!-- keyboard  -->
          <div>
@@ -112,7 +118,7 @@
         </div>
       </section>
       <!-- score  -->
-      <section class="score flex justify-center items-center min-h-screen border">
+      <section class="score flex justify-center items-center min-h-screen border hidden">
         <div class=" text-white text-center space-y-6 bg-gradient-to-r from-violet-500 to-fuchsia-500 p-8 rounded-md">
           <h1 class="poppins-medium text-6xl">Score : 14</h1>
           <button class="poppins-medium bg-white text-black rounded-md px-7 py-3 text-2xl">Play Now</button>
@@ -121,5 +127,7 @@
       </section>
       
     </main>
+    <script src="script/clashFunctions.js"></script>
+    <script src="script/clash.js"></script>
   </body>
 </html>
