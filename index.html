@@ -1,11 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>alpha clash</title>
-</head>
-<body>
-  
-</body>
+<html lang="en " data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>alpha clash</title>
+    <!-- daisy ui & tailwind 
+   -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+      rel="stylesheet"
+    />
+    <!-- popins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .anton-regular {
+        font-family: "Anton", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      .poppins-medium {
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+      }
+
+      .poppins-semibold {
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="bg-[#010313] home min-h-screen bg-[url('images/background.png')] bg-no-repeat bg-top">
+      <!-- home screen  -->
+      <section class="hidden ">
+        <div class="min-h-screen text-white text-center flex flex-col justify-center items-center space-y-6">
+          <h1 class="text-9xl anton-regular">ALPHABET CLASH</h1>
+          <p class="poppins-semibold ">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
+          <button class="poppins-medium bg-white text-black rounded-md px-7 py-3 text-2xl">Play Now</button>
+        </div>
+      </section>
+      <!-- play ground  -->
+      <section class="play-ground">
+         <!-- screen  -->
+         <div class=" flex justify-center ">
+          <div class="artboard bg-[#FFFFFFB3] artboard-horizontal phone-6 border-[20px] border-[#212542CC] my-[100px] ">1024×320</div>
+         </div>
+         <!-- keyboard  -->
+         <div>
+          <div class="flex justify-center gap-1 my-1 w-full">
+            <kbd class="kbd">q</kbd>
+            <kbd class="kbd">w</kbd>
+            <kbd class="kbd">e</kbd>
+            <kbd class="kbd">r</kbd>
+            <kbd class="kbd">t</kbd>
+            <kbd class="kbd">y</kbd>
+            <kbd class="kbd">u</kbd>
+            <kbd class="kbd">i</kbd>
+            <kbd class="kbd">o</kbd>
+            <kbd class="kbd">p</kbd>
+          </div> 
+          <div class="flex justify-center gap-1 my-1 w-full">
+            <kbd class="kbd">a</kbd>
+            <kbd class="kbd">s</kbd>
+            <kbd class="kbd">d</kbd>
+            <kbd class="kbd">f</kbd>
+            <kbd class="kbd">g</kbd>
+            <kbd class="kbd">h</kbd>
+            <kbd class="kbd">j</kbd>
+            <kbd class="kbd">k</kbd>
+            <kbd class="kbd">l</kbd>
+          </div> 
+          <div class="flex justify-center gap-1 my-1 w-full">
+            <kbd class="kbd">z</kbd>
+            <kbd class="kbd">x</kbd>
+            <kbd class="kbd">c</kbd>
+            <kbd class="kbd">v</kbd>
+            <kbd class="kbd">b</kbd>
+            <kbd class="kbd">n</kbd>
+            <kbd class="kbd">m</kbd>
+            <kbd class="kbd">/</kbd>
+          </div>
+         </div>
+      </section>
+      <!-- score  -->
+      <div>
+        <button class="btn">Life 
+          <img src="" alt="">
+        </button>
+      </div>
+      <section class="score"></section>
+      
+    </main>
+  </body>
 </html>
