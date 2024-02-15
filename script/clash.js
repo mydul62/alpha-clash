@@ -46,23 +46,19 @@ document.addEventListener("keyup", (event) => {
   const randomAlphabet = document.getElementById("display-board").innerText;
   const alphabet = randomAlphabet.toLowerCase();
   if (playerPressed === alphabet) {
-    console.log(playerPressed, alphabet);
-    const winScore = document.getElementById("score");
-    let score = parseInt(winScore.innerText);
-    let newscore = score + 1;
-    winScore.innerText = newscore;
+    const currentScore = getTextElementValueById('score');
+    let newscore = currentScore + 1;
+    setElementById('score',newscore)
     removeBackgroundColor(alphabet);
     continueGame();
   } else {
-    console.log(playerPressed, alphabet);
-    const lostScore = document.getElementById("life");
-    let lost = parseInt(lostScore.innerText);
-    let newlife = lost - 1;
-    lostScore.innerText = newlife;
-    if (newlife === 0) {
+    const currentLife = getTextElementValueById('life');
+    let newLife = currentLife - 1;
+    setElementById('life',newLife)
+    if (newLife === 0) {
       gameOver();
-      const scoreResult = document.getElementById("total-result");
-      scoreResult.innerText = newscore;
+      const currentAlphabet=getTextElementById(alphabet);
+      removeBackgroundColor(currentAlphabet);
     }
   }
 });

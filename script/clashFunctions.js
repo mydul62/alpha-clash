@@ -16,3 +16,12 @@ function setElementById(elementId,value){
  const element = document.getElementById(elementId);
  element.innerText= value;
 }
+function getTextElementValueById(elementId){
+ const element = document.getElementById(elementId);
+return value=parseInt(element.innerText);
+}
+function getTextElementById(elementId){
+const element = document.getElementById(elementId);
+const text = element.innerText;
+return text;
+}
