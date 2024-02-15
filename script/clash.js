@@ -1,32 +1,4 @@
-// reset()
-// onload();
-// function onload(){
-//   let getscore = localStorage.getItem('score');
-//   let score = getscore ? JSON.parse(getscore) : 0;
-//   const winScore = document.getElementById('score');
-//   winScore.innerText = score;
-//   scoreSave();
-// }
 
-// let getscore = localStorage.getItem('score');
-// let score = getscore?JSON.parse(getscore):0;
-
-// }
-
-// function reset(){
-//   localStorage.clear();
-// }
-
-// ---------------------------------------------------------------------------------------
-// function scoreSave(alphabet){
-//   const winScore = document.getElementById('score')
-//
-
-//    })
-//   }
-
-// score++;
-// localStorage.setItem('score',JSON.stringify(score));
 //___________________________________________________________________________________
 // play game__________________
 function playBtn() {
@@ -61,7 +33,11 @@ document.addEventListener("keyup", (event) => {
       const currentAlphabet=getTextElementById(alphabet);
       removeBackgroundColor(currentAlphabet);
     }
+   
   }
+  setTimeout(() => {
+      
+  }, 10000);
 });
 function reset(){
 gameOver();
