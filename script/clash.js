@@ -43,6 +43,7 @@ function playBtn() {
 // key board event
 document.addEventListener("keyup", (event) => {
   const playerPressed = event.key;
+  
   const randomAlphabet = document.getElementById("display-board").innerText;
   const alphabet = randomAlphabet.toLowerCase();
   if (playerPressed === alphabet) {
@@ -62,6 +63,9 @@ document.addEventListener("keyup", (event) => {
     }
   }
 });
+function reset(){
+gameOver();
+}
 
 // game continue _____________________________________________
 function continueGame() {

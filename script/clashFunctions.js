@@ -9,7 +9,8 @@ function hideElementById(element) {
 function gameOver() {
   hideElementById("play_screen");
   showElementById("score-window");
-  
+  const lastScore = getTextElementValueById('score')
+  setElementById('total-result',lastScore)
 }
 
 function setElementById(elementId,value){
