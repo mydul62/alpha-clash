@@ -1,6 +1,7 @@
 
 //___________________________________________________________________________________
 // play game__________________
+// Modified playBtn function to start the timer
 function playBtn() {
   // hide and show element
   hideElementById("Home_screen");
@@ -10,12 +11,15 @@ function playBtn() {
   setElementById("life", 5);
   setElementById("score", 0);
 
+  // Start the timer when the game starts
+  startTimer();
   continueGame();
 }
 // key board event
+// Modified the keyup event listener to stop the timer when the game ends
 document.addEventListener("keyup", (event) => {
   const playerPressed = event.key;
-  
+
   const randomAlphabet = document.getElementById("display-board").innerText;
   const alphabet = randomAlphabet.toLowerCase();
   if (playerPressed === alphabet) {
@@ -33,14 +37,13 @@ document.addEventListener("keyup", (event) => {
       const currentAlphabet=getTextElementById(alphabet);
       removeBackgroundColor(currentAlphabet);
     }
-   
   }
-  setTimeout(() => {
-      
-  }, 10000);
 });
+
+// Modified reset function to reset the timer
 function reset(){
-gameOver();
+  resetTimer();
+  gameOver();
 }
 
 // game continue _____________________________________________
@@ -68,4 +71,28 @@ function setBackgroundColor(elementid) {
 function removeBackgroundColor(elementid) {
   const element = document.getElementById(elementid);
   element.classList.remove("bg-red-400");
+}
+// Timer variables
+let timeLeft = 30;
+let timerInterval;
+
+// Timer function
+function startTimer() {
+  const timerElement = document.getElementById("timer");
+  timerInterval = setInterval(() => {
+    if (timeLeft > 0) {
+      timerElement.innerText = `Time Left: ${timeLeft} seconds`;
+      timeLeft--;
+    } else {
+      clearInterval(timerInterval);
+      gameOver();
+    }
+  }, 1000);
+}
+// Function to reset the timer
+function resetTimer() {
+  clearInterval(timerInterval);
+  timeLeft = 30;
+  const timerElement = document.getElementById("timer");
+  timerElement.innerText = "";
 }

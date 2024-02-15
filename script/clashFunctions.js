@@ -6,7 +6,9 @@ function hideElementById(element) {
   const hideElement = document.getElementById(element);
   hideElement.classList.add("hidden");
 }
+// Modified gameOver function to reset the timer
 function gameOver() {
+  resetTimer();
   hideElementById("play_screen");
   showElementById("score-window");
   const lastScore = getTextElementValueById('score')
