@@ -49,6 +49,9 @@
   </head>
   <body>
     <main class="bg-[#010313] home  min-h-screen bg-[url('images/background.png')] bg-no-repeat bg-top">
+      <header class=" ">
+        <h1 class="text-center text-white ">@mydul islam mahim-2024</h1>
+      </header>
       <!-- home screen  -->
       <section id="Home_screen" class="home ">
         <div class="min-h-screen text-white text-center flex flex-col justify-center items-center space-y-6">
@@ -62,7 +65,7 @@
          <!-- screen  -->
          <div class=" flex justify-center ">
           <div class="artboard bg-[#FFFFFFB3] artboard-horizontal phone-6 border-[20px] border-[#212542CC] my-[60px] ">
-            <div class="flex justify-center">
+            <div class="flex justify-center gap-4">
               <span id="timer"></span>
               <p class="bg-[#212542CC] inline-block px-4 pb-4 rounded-b-xl text-white poppins-medium">Don't watch keyboard  while playing...</p>
             </div>
@@ -123,7 +126,7 @@
         
       </section>
       <!-- score  -->
-      <section id="score-window" class="score flex justify-center items-center min-h-screen border hidden">
+      <section id="score-window" class="score flex justify-center items-center min-h-screen  hidden">
         <div class=" text-white text-center space-y-6 bg-gradient-to-r from-violet-500 to-fuchsia-500 p-8 rounded-md">
           <p class="text-xl font-bold">game over</p>
           <h1 class="poppins-medium text-6xl">Score : <span id="total-result">0</span></h1>
@@ -133,6 +136,7 @@
       </section>
       
     </main>
+    
     <script src="script/clashFunctions.js"></script>
     <script src="script/clash.js"></script>
   </body>
