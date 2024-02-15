@@ -73,7 +73,7 @@ function removeBackgroundColor(elementid) {
   element.classList.remove("bg-red-400");
 }
 // Timer variables
-let timeLeft = 30;
+let timeLeft = 60;
 let timerInterval;
 
 // Timer function
@@ -81,7 +81,7 @@ function startTimer() {
   const timerElement = document.getElementById("timer");
   timerInterval = setInterval(() => {
     if (timeLeft > 0) {
-      timerElement.innerText = `Time Left: ${timeLeft} seconds`;
+      timerElement.innerHTML = `<span class="text-2xl font-bold">${timeLeft} seconds</span>`;
       timeLeft--;
     } else {
       clearInterval(timerInterval);
